@@ -1,0 +1,276 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body, html{
+    @apply text-gray-600
+}
+
+body{
+    @apply bg-neutral-100
+}
+
+#preloader{
+    @apply fixed top-1/2 left-1/2
+}
+
+#content{
+    @apply invisible
+}
+
+#header-wrapper{
+    @apply h-24 w-full relative top-0 z-40 shadow-md
+}
+
+.header{
+    @apply bg-white shadow-md h-24 w-full flex items-center font-[500] z-40 fixed top-0
+}
+
+.header-tabs{
+    @apply ml-auto mr-auto sm:flex hidden justify-around w-2/6
+}
+
+.header-tabs span:not(#products-toggle), .header-tabs  a:not(#products-toggle){
+    @apply duration-300 cursor-pointer hover:opacity-70
+}
+
+.header-tabs span, .header-tabs a{
+    @apply p-2
+}
+
+#products-toggle{
+    @apply cursor-pointer
+
+}
+
+#products-toggle:hover > div:first-child{
+    @apply opacity-70
+}
+
+
+.header-tabs span.active, .header-tabs a.active{
+    @apply text-yellow-500
+}
+
+
+.quote-btn-header{
+    @apply ml-auto mr-8 text-white bg-yellow-500 p-4 border-2 border-yellow-500 duration-300 hover:bg-white hover:text-yellow-500 sm:flex hidden
+}
+
+.btn-main{
+    @apply ml-auto mr-8 text-white bg-yellow-500 p-2 sm:p-4 border-2 border-yellow-500 duration-300 hover:bg-transparent hover:text-yellow-500 w-max flex text-[0.8rem] sm:text-base
+}
+
+.quote-btn-header-mobile{
+    @apply text-white justify-center items-center bg-yellow-500 p-2 border-2 border-yellow-500 duration-300 hover:bg-white hover:text-yellow-500 sm:hidden flex mt-auto mb-4 w-11/12 ml-auto mr-auto mt-4
+}
+
+.nav-icon{
+    @apply ml-auto mr-6 border-2 border-gray-400 rounded-md p-2 sm:hidden inline-block !important
+}
+
+.mobile-header-tabs{
+    @apply bg-white shadow-md h-full w-52 fixed top-0 left-0 z-30 flex flex-col
+}
+
+.mobile-header-tabs > div:not(#product-section-mobile){
+    @apply border-b border-gray-300 h-12 flex items-center cursor-pointer duration-300 hover:bg-gray-100
+}
+
+.mobile-header-tabs div.active{
+    @apply text-yellow-500
+}
+
+.mobile-header-tabs div a{
+    @apply ml-2 font-[500] flex items-center
+}
+
+.clickaway, .clickaway-products{
+    @apply fixed w-full h-full z-30
+}
+
+#footer-wrapper{
+    @apply h-auto w-full bg-zinc-800 relative text-white
+}
+
+.footer{
+    @apply flex flex-col sm:flex-row p-2 w-full h-max sm:h-[15rem]  justify-between
+}
+
+.footer-contact-icon div i{
+    @apply text-[0.7rem] sm:text-base !important
+}
+
+.key-points-container{
+    @apply flex flex-col sm:flex-row bg-transparent mb-4 sm:-mt-20 pb-0 sm:pb-[2rem] relative justify-center overflow-hidden md:px-4
+}
+
+.key-points-container > div{
+    @apply bg-white rounded-md p-6 flex w-[95%] sm:w-[24rem] h-[18rem]  flex-col items-center shadow-md sm:shadow-xl mt-4 ml-auto sm:ml-0 sm:mr-0 mr-auto
+}
+
+.key-points-container > div:first-child{
+    @apply mt-6 sm:mt-4
+}
+
+.key-points-container > div:not(:first-child){
+    @apply ml-auto sm:ml-8
+}
+
+.key-points-container div div{
+    @apply w-full justify-center flex
+}
+
+
+.key-points-container div i{
+    @apply text-yellow-500 text-[3rem]
+}
+
+.layman-container{
+    @apply bg-transparent p-4 mt-4 sm:mt-12 flex flex-col sm:flex-row  sm:px-44 md:px-4 md:pl-2 justify-center sm:mb-8 mb-0
+}
+
+.progress-card{
+    @apply mt-8
+}
+
+.progress-card > div{
+    @apply bg-white p-4 rounded-md shadow-md sm:shadow-xl flex flex-col items-center w-1/2 sm:w-52
+}
+
+.progress-card > div:last-child{
+    @apply hidden sm:flex
+}
+
+.progress-card > div div:first-child, .progress-card-mobile > div:first-child{
+    @apply text-yellow-500 font-semibold text-[2rem]
+}
+
+.progress-card > div div:nth-child(2), .progress-card-mobile > div:nth-child(2){
+    @apply font-[500]
+}
+
+.progress-card > div:not(:first-child){
+    @apply ml-4
+}
+
+.progress-card-mobile{
+    @apply mt-8 shadow-md w-full mb-12 flex flex-col items-center sm:hidden bg-white p-4 rounded-md shadow-xl
+}
+
+.alumini-container{
+    @apply bg-zinc-800 w-full p-4 flex flex-col items-center py-24
+}
+
+.exp-continer{
+    @apply px-4 py-12 flex flex-col items-center bg-transparent
+}
+
+.choose-us-container{
+    @apply flex flex-col sm:flex-row md:flex-row bg-center bg-no-repeat bg-cover text-white items-center p-8 justify-center
+} 
+
+.choose-us-context{
+    @apply w-full sm:w-[40%] md:w-[60%] lg:w-[40%]  grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8 sm:mt-0 ml-0 sm:ml-0 md:ml-8
+}
+
+.choose-us-context div{
+    @apply bg-white rounded-md text-gray-800 p-2 text-center
+}
+
+.choose-us-context div i{
+    @apply text-yellow-500 text-[2.5rem] mt-2 mb-2
+}
+
+.projects-container{
+    @apply p-8 flex flex-col items-center pb-20
+}
+
+.projects-context{
+    @apply grid grid-cols-1 sm:grid-cols-4 gap-12 w-full sm:w-[80%]
+}
+
+.projects-context img{
+    @apply shadow-xl rounded-lg
+}
+
+.quote-container{
+    @apply flex flex-col  bg-center bg-no-repeat bg-cover text-white items-center px-8 py-24 justify-center
+}
+
+.form-container{
+    @apply w-full sm:w-[40%] md:w-[60%] lg:w-[40%] ml-auto mr-auto
+}
+
+input[type='text'], textarea{
+    @apply w-full bg-white rounded-md p-3 border border-black text-gray-800
+}
+
+textarea{
+    @apply h-[12rem]
+}
+
+input[type='text']:focus, textarea:focus{
+    @apply outline-none border border-yellow-500
+}
+
+
+.form-container > div{
+    @apply flex flex-col mt-8
+}
+
+#product-section{
+    @apply transition-all duration-300 ease-in-out overflow-hidden bg-white rounded-md shadow-md absolute flex flex-col w-max h-max -right-20 top-12 border border-gray-100
+}
+
+#product-section a{
+    @apply p-4 text-left cursor-pointer duration-300 hover:opacity-70 
+
+}
+
+#product-section a:not(:last-child){
+    @apply border-b border-gray-400
+}
+
+#product-section-mobile{
+    @apply flex flex-col text-sm shadow-inner border-t border-b-2 border-gray-300 w-full transition-all duration-300 ease-in-out overflow-y-scroll overflow-x-hidden
+}
+
+#product-section-mobile a{
+    @apply p-4 cursor-pointer
+}
+
+#product-section-mobile a:not(:last-child){
+    @apply border-b border-gray-200
+}
+
+.product-heading{
+    @apply font-[600] text-[1.8rem] sm:text-[2.5rem] md:text-[2rem] text-center
+}
+
+.heading-line{
+    @apply bg-yellow-500 w-[4rem] h-[0.5rem] ml-auto mr-auto 
+}
+
+.paver-products-container{
+    @apply grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-20 ml-auto mr-auto w-[80%] place-items-center mt-4 mb-12 
+}
+
+
+.paver-products-container div img{
+    @apply w-[10rem] h-[8rem] object-fill 
+}
+
+.products-container{
+    @apply w-full h-full flex flex-col bg-white
+}
+
+.product-heading-section{
+    @apply mt-8 mb-8
+}
+
+.spec-container{
+    @apply flex flex-col mb-4 bg-gray-200 rounded-md shadow-md p-12 h-max sm:w-max w-[90%] ml-auto mr-auto mt-4 mb-4 
+}
+

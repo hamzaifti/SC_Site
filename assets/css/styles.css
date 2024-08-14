@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body, html{
+    font-family: poppins;
+}
+
+#preloader{
+  transform: translate(-50%, -50%);
+}
+
+.header-tabs{
+    transform: translateX(20%);
+}
+
+.mobile-header-tabs {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+.mobile-header-tabs.open {
+    transform: translateX(0);
+}
+
+.clickaway{
+    background: rgba(15, 23, 42, 0.3);
+}
+
+.layman-context{
+    width: 40%;
+    padding-left: 2rem;
+}
+
+.choose-us-container{
+  background-image: linear-gradient(0deg, rgba(55, 65, 81, .7), rgba(55, 65, 81, .7)), url(../img/sc_industrial_paving.jpg);
+}
+
+.quote-container{
+  background-image: linear-gradient(0deg, rgba(55, 65, 81, .7), rgba(55, 65, 81, .7)), url(../img/sc_quote_bg.png);
+}
+
+input[type='text']:focus, textarea:focus{
+  box-shadow: 0 1px 14px #fcd34d;
+}
+
+.background-container{
+  height: 100vh;
+}
+
+#product-section, #product-section-mobile{
+  max-height: 0;
+  opacity: 0;   
+}
+
+#product-section.open, #product-section-mobile.open {
+  max-height: 1000px; 
+  opacity: 1;
+}
+
+
+#product-section-mobile::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+
+#product-section-mobile::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+
+#product-section-mobile::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#product-section-mobile::-webkit-scrollbar-thumb {
+  background: transparent; /* Hide the scrollbar thumb */
+  scrollbar-width: thin; /* Make the scrollbar thin */
+  scrollbar-color: transparent transparent; /* Hide the scrollbar thumb but keep the track */
+}
+
+.about-us-banner{
+  justify-content: space-around;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+
+
+@media only screen and (max-width: 1600px) {
+  body{
+    zoom: 60%;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px){
+  body{
+    zoom: 80%;
+  }
+  .background-container{
+    height: 120vh;
+  }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .layman-context {
+      width: 60%;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .about-us-banner{
+      justify-content: center;
+      margin-top: 2rem;
+      margin-bottom: 0;
+      transform: scale(1);
+    }
+    .about-us-banner img:not(:first-child){
+      margin-left: 3rem;
+    }
+    .layman-context {
+      width: 100%;
+      padding-left: 0;
+    }
+    body{
+      zoom: 80%;
+    }
+  }
+  
